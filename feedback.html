@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <!-- Customer Feedback Form -->
+
+<section class="feedback">
+
+    <h2 class="section-title">Share Your Feedback</h2>
+
+    <form class="feedback-form">
+
+        <input type="text" placeholder="Your Name" required>
+
+        <select>
+            <option>Select Rating</option>
+            <option>⭐⭐⭐⭐⭐</option>
+            <option>⭐⭐⭐⭐</option>
+            <option>⭐⭐⭐</option>
+            <option>⭐⭐</option>
+            <option>⭐</option>
+        </select>
+
+        <textarea placeholder="Write your feedback..." rows="5"></textarea>
+
+        <button type="submit">Submit Feedback</button>
+
+    </form>
+
+</section>
+
+<script>
+document.querySelector(".feedback-form").addEventListener("submit",function(e){
+    e.preventDefault();
+    alert("✅ Thank you for your valuable feedback!");
+    this.reset();
+});
+</script> 
+    
+</body>
+</html>

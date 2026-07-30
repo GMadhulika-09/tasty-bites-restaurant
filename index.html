@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasty Bites Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <h2 class="logo">🍽️ Tasty Bites</h2>
+
+        <ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="menu.html">Menu</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="FAQ.html">FAQ</a></li>
+<li><a href="feedback.html">Feedback</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <h1>Delicious Food Made With Love</h1>
+        <p>Fresh Ingredients • Fast Delivery • Amazing Taste</p>
+        <p>Open Daily from 11:00 AM to 10:00 PM</p>
+
+        <button>Order Now</button>
+    </div>
+</header>
+
+<div class="social-icons">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-x-twitter"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+</div>
+ 
+<script src="script.js"></script>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const form = document.querySelector("form");
+
+    if(form){
+
+        form.addEventListener("submit", function(e){
+
+            e.preventDefault();
+
+            const inputs = form.querySelectorAll("input, textarea, select");
+
+            let valid = true;
+
+            inputs.forEach(input => {
+
+                if(input.value.trim() === ""){
+                    valid = false;
+                }
+
+            });
+
+            if(valid){
+                alert("🎉 Thank you! Your details have been submitted successfully.");
+                form.reset();
+            }else{
+                alert("⚠ Please fill all the fields.");
+            }
+
+        });
+
+    }
+
+});
+
+</script>
+<footer>
+
+<div class="footer-container">
+
+<div class="footer-box">
+<h2>Tasty Bites</h2>
+<p>our mission is to provide the best dining experience with fresh, delicious food.</p>
+</div>
+
+<div class="footer-box">
+<div class="footer-box">
+<h2>Contact</h2>
+<p>📍 Vijayawada</p>
+<p>📞 +91 9876543210</p>
+<p>📧 tastybites@gmail.com</p>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+<p>© 2026 Tasty Bites. All Rights Reserved.</p>
+</div>
+
+</footer>
+<button id="topBtn" onclick="topFunction()">↑</button>
+<script>
+let topBtn = document.getElementById("topBtn");
+
+window.onscroll = function () {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        topBtn.style.display = "block";
+    } else {
+        topBtn.style.display = "none";
+    }
+};
+
+function topFunction() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+</script>
+<!-- Customer Reviews Section -->
+
+<section class="reviews">
+
+    <h2 class="section-title">What Our Customers Say</h2>
+
+    <div class="review-container">
+
+        <div class="review-card">
+            <h3>⭐⭐⭐⭐⭐</h3>
+            <p>"Amazing food and excellent service. Highly recommended!"</p>
+            <h4>- Rahul</h4>
+        </div>
+
+        <div class="review-card">
+            <h3>⭐⭐⭐⭐⭐</h3>
+            <p>"Best pizza in town. Loved the ambience."</p>
+            <h4>- Priya</h4>
+        </div>
+
+        <div class="review-card">
+            <h3>⭐⭐⭐⭐⭐</h3>
+            <p>"Fresh food, quick delivery and friendly staff."</p>
+            <h4>- Kiran</h4>
+        </div>
+
+    </div>
+
+</section>
+<!-- Opening Hours Section -->
+
+<section class="opening-hours">
+
+    <h2 class="section-title">Opening Hours</h2>
+
+    <table class="hours-table">
+        <tr>
+            <td>Monday - Friday</td>
+            <td>10:00 AM - 10:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Saturday</td>
+            <td>9:00 AM - 11:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Sunday</td>
+            <td>9:00 AM - 11:30 PM</td>
+        </tr>
+    </table>
+
+</section>
+<!-- Special Offers Section -->
+
+<section class="offers">
+
+    <h2 class="section-title">Today's Special Offers</h2>
+
+    <div class="offer-container">
+
+        <div class="offer-card">
+            <h3>🍕 Pizza Combo</h3>
+            <p>Buy 1 Get 1 Free</p>
+        </div>
+
+        <div class="offer-card">
+            <h3>🍔 Burger Deal</h3>
+            <p>20% OFF on Combo Meals</p>
+        </div>
+
+        <div class="offer-card">
+            <h3>🥤 Free Drink</h3>
+            <p>Free Soft Drink on Orders Above ₹499</p>
+        </div>
+
+    </div>
+
+</section>
+<!-- Our Partners -->
+
+<section class="partners">
+
+    <h2 class="section-title">Our Delivery Partners</h2>
+
+    <div class="partner-container">
+
+        <div class="partner-card">
+            <img src="images/swiggy.png" alt="Swiggy">
+        </div>
+
+        <div class="partner-card">
+            <img src="images/zomato.png" alt="Zomato">
+        </div>
+
+        <div class="partner-card">
+            <img src="images/ubereats.png" alt="Uber Eats">
+        </div>
+
+    </div>
+
+</section>
+<!-- Location Section -->
+
+<section class="location">
+
+    <h2 class="section-title">Find Us</h2>
+
+    <div class="map-container">
+
+        <iframe 
+        src="https://www.google.com/maps/embed"
+        width="100%" 
+        height="350"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+        </iframe>
+
+    </div>
+
+</section>
+<!-- Download Menu -->
+
+<section class="download-menu">
+
+    <h2 class="section-title">Download Our Menu</h2>
+
+    <p>View our complete menu anytime.</p>
+
+    <a href="menu.pdf" download>
+        <button>📄 Download Menu (PDF)</button>
+    </a>
+
+</section>
+<!-- Download Our App -->
+
+<section class="app-download">
+
+    <h2 class="section-title">Download Our App</h2>
+
+    <p>Order your favorite meals anytime, anywhere.</p>
+
+    <div class="app-buttons">
+
+        <a href="#">
+            <button>📱 Google Play</button>
+        </a>
+
+        <a href="#">
+            <button>🍎 App Store</button>
+        </a>
+
+    </div>
+
+</section>
+<!-- Mobile App QR Section -->
+
+<section class="qr-section">
+
+    <h2 class="section-title">Order Faster</h2>
+
+    <p>Scan the QR code and order instantly.</p>
+
+    <img src="images/qr-code.png" alt="QR Code">
+
+</section>
+</body>
+</html>

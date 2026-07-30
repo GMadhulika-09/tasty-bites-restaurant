@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Tasty Bites</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h2 class="logo">🍽️ Tasty Bites</h2>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="about-page">
+    <div class="about-content">
+        <h1>About Our Restaurant</h1>
+
+        <p>
+            Welcome to <strong>Tasty Bites</strong>, where every meal is prepared
+            with fresh ingredients, authentic recipes, and lots of love.
+            Since our beginning, we have been serving delicious food with
+            excellent customer service.
+        </p>
+
+        <p>
+            Our experienced chefs create mouth-watering dishes ranging from
+            pizzas and burgers to Indian and Chinese cuisine. We believe
+            great food brings people together.
+        </p>
+
+        <p>
+            Thank you for choosing Tasty Bites.
+            We look forward to serving you!
+        </p>
+
+        <a href="menu.html">
+            <button>View Our Menu</button>
+        </a>
+    </div>
+</section>
+
+<script src="script.js"></script>
+/* Place this before </body> in every HTML page */
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const form = document.querySelector("form");
+
+    if(form){
+
+        form.addEventListener("submit", function(e){
+
+            e.preventDefault();
+
+            const inputs = form.querySelectorAll("input, textarea, select");
+
+            let valid = true;
+
+            inputs.forEach(input => {
+
+                if(input.value.trim() === ""){
+                    valid = false;
+                }
+
+            });
+
+            if(valid){
+                alert("🎉 Thank you! Your details have been submitted successfully.");
+                form.reset();
+            }else{
+                alert("⚠ Please fill all the fields.");
+            }
+
+        });
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>

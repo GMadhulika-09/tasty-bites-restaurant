@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Tasty Bites</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+<h2 class="logo">🍽️ Tasty Bites</h2>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="menu.html">Menu</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+<section class="contact">
+
+<h1>Contact Us</h1>
+
+<form>
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Your Email" required>
+
+<input type="tel" placeholder="Phone Number">
+
+<textarea rows="6" placeholder="Your Message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+<div class="contact-info">
+<h3>📍 Vijayawada, Andhra Pradesh</h3>
+<h3>📞 +91 9665687979</h3>
+<h3>✉️ tastybites@email.com</h3>
+</div>
+
+<footer>
+    <p>© 2026 Tasty Bites. All rights reserved.</p>
+</footer>
+</section>
+
+
+<script src="script.js"></script>
+
+/* Place this before </body> in every HTML page */
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const form = document.querySelector("form");
+
+    if(form){
+
+        form.addEventListener("submit", function(e){
+
+            e.preventDefault();
+
+            const inputs = form.querySelectorAll("input, textarea, select");
+
+            let valid = true;
+
+            inputs.forEach(input => {
+
+                if(input.value.trim() === ""){
+                    valid = false;
+                }
+
+            });
+
+            if(valid){
+                alert("🎉 Thank you! Your details have been submitted successfully.");
+                form.reset();
+            }else{
+                alert("⚠ Please fill all the fields.");
+            }
+
+        });
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
